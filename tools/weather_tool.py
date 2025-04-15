@@ -2,7 +2,7 @@ import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 async def get_weather_info(city: str) -> str:
-    client = MultiServerMCPClient(endpoint="http://localhost:8000")
+    client = MultiServerMCPClient()
     try:
         # 获取工具列表
         tools = client.get_tools()
