@@ -3,7 +3,7 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 from tools.attraction_tool import recommend_attractions
 
 async def get_route_info(query: str) -> str:
-    client = MultiServerMCPClient(endpoint="http://localhost:8000")
+    client = MultiServerMCPClient()
     try:
         # 提取城市
         city = query.split()[0]
